@@ -161,18 +161,156 @@
 # print('Number of hot days:', hot_days)
 
 
-rooms =[[[False for r in range(20)] for f in range(15)] for t in range (3)]
+# rooms =[[[False for r in range(20)] for f in range(15)] for t in range (3)]
 
-print(rooms)
+# print(rooms)
 
-rooms[1][9][13] = True
+# rooms[1][9][13] = True
 
-rooms[1][9][1] = True
+# rooms[1][9][1] = True
 
 
-vacancy = 0
-for room_number in range(20):
-    if not rooms[1][9][room_number]:
-        vacancy += 1
+# vacancy = 0
+# for room_number in range(20):
+#     if not rooms[1][9][room_number]:
+#         vacancy += 1
         
-print('Number of vacant rooms on floor 9:', vacancy)
+# print('Number of vacant rooms on floor 9:', vacancy)
+
+
+
+# def message():
+#     print('Enter a value :')
+    
+# message()
+# a = int(input())
+
+# message()
+# b = int(input())
+
+# message()
+# c = int(input())
+
+
+# def message():
+#     print('Enter a value :')
+#     temp = int(input())
+#     return temp
+
+
+# a = message()
+# b = message()
+# c = message()
+
+# print('a =', a)
+# print('b =', b)
+# print('c =', c)
+
+# def message():
+#     print('Enter a value : ')
+
+
+# print('We start here.')
+# print(message)
+# message()
+# print('Wr end here.')
+
+
+# def hello(n): #Defining a function named hello that takes one parameter n
+#     print('Hello,', n)   #body of the function that prints a greeting message with the value of n
+    
+# name = input('Enter your name: ')
+# hello(name)   #Calling the function hello with the argument name, which is obtained from user input
+
+# def message(number):
+#     print('Enter a number:',number)
+    
+# number = 1234
+# message(1)
+# print(number)
+
+
+# def message(what,number):
+#     print('Enter ', what, 'number', number)
+    
+# message('telephone', 11)
+# message(11,'telephone')
+
+# message('price', 5)
+# message(5, 'price')
+# message('number', 'number')
+
+
+# def introduction(first_name, last_name):
+#     print('Hello, My name is', first_name, last_name)
+    
+# introduction('John', 'Smith')
+# introduction('Smith', 'John')
+# introduction('Soyash', 'Patel')
+
+
+# introduction(last_name = 'Thakur', first_name = 'Soyash')
+# introduction(first_name = 'John', last_name = 'Smith')
+
+# def adding(a,b,c):
+#     print(a, '+', b, '+', c, '=', a+b+c)
+    
+    
+# adding(1,2,3)
+# adding(c=3, a=1, b=2)
+# adding(c=1, a=2, b=3)
+# adding(1, c=3, b=2)
+# adding(1, a=2, c=3)
+
+
+# def happy_new_year(wishes = True):
+#     print('Three...')
+#     print('Two...')
+#     print('One...')
+#     if not wishes:
+#         return
+#     print('Happy New Year!')
+    
+# happy_new_year(True)
+# # happy_new_year(False)
+
+# def boring_function():
+#     print("'Bordom Mode'ON.")
+#     return 123
+
+# print('The lesson is intersting!')
+# boring_function()
+# print('The lesson is boring...')
+
+# def chackMyVar(variable):
+#     if (variable==10):
+#         print('Variable is 10')
+#         return 2
+#     else:
+#         print('Variable is not up to the mark')
+#         return
+    
+# chackMyVar(5)
+# print()
+
+
+
+# def list_sum(list):
+#     total = 0
+#     for element in list:
+#         total += element
+#     return total
+
+# print(list_sum([5,4,3]))
+
+
+def strange_list_fun(n):
+    strange_list = []
+    
+    for i in range(n):
+        # strange_list.insert(0, i+1)
+        strange_list.append(i+1)
+    
+    return strange_list
+
+print(strange_list_fun(5))
