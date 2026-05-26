@@ -2,6 +2,7 @@
 # print('Welcome to Python programming.')
 # print('testing ')
 
+
 # list = [8,10,6,2,4]
 # swapped = True
 # count = 0
@@ -53,6 +54,7 @@
 
 # del list[:]
 # print(list)
+
 
 # raw = []
 # for i in range(8):
@@ -304,13 +306,116 @@
 # print(list_sum([5,4,3]))
 
 
-def strange_list_fun(n):
-    strange_list = []
+# def strange_list_fun(n):
+#     strange_list = []
     
-    for i in range(n):
-        # strange_list.insert(0, i+1)
-        strange_list.append(i+1)
+#     for i in range(n):
+#         # strange_list.insert(0, i+1)
+#         strange_list.append(i+1)
     
-    return strange_list
+#     return strange_list
 
-print(strange_list_fun(5))
+# print(strange_list_fun(5))
+
+
+
+# def scope_test():
+#     x = 123
+# scope_test()
+# print(x)
+
+# def my_function():
+#     print('Do i know that variale?', var)
+    
+# var =1
+# my_function()
+# print(var)
+
+
+# def mult(x):
+#     var =7
+#     return x * var
+
+# var =3
+# print(mult(7))
+
+
+# def my_function():
+#     global var
+#     var = 2
+#     print('Do I know that variable?', var)
+    
+# var = 1
+# my_function()
+# print(var)
+
+
+
+# var = 2
+# print(var) #Output: 2
+
+# def return_var():
+#     global var
+#     var = 5
+#     return var
+
+# print(return_var()) #Output: 5
+# print(var) #Output: 5
+
+
+# def my_function(n):
+#     print('I got', n)
+#     n+=1
+#     print('I have', n)
+    
+# var = 1
+# my_function(var)
+# print(var)
+    
+
+# def my_function(my_list_1):
+#     print('print #1:', my_list_1)
+#     print('print #2:', my_list_2)
+#     my_list_1 =[0,1]
+#     print('print #3:', my_list_1)
+#     print('print #4:', my_list_2)
+    
+# my_list_2 =[2,3]
+# my_function(my_list_2)
+# print('print #5:', my_list_2)
+
+
+# def my_function(my_list_1):
+#     print('print #1:', my_list_1)
+#     print('print #2:', my_list_2)
+#     del my_list_1[0]
+#     print('print #3:', my_list_1)
+#     print('print #4:', my_list_2)
+    
+# my_list_2 =[2,3]
+# my_function(my_list_2)
+# print('print #5:', my_list_2)
+
+
+# def countdown(n):
+#     print(n)
+#     if n == 0:
+#         return
+#     else:
+#         print('Going in rec :', n)
+#         countdown(n-1)
+#         print('out of rec :', n)
+# print('Starting Recursion...')
+# countdown(5)  
+# print('Recursion finished!')
+
+
+# def factorial(n):
+#     if n == 0:
+#         return 1
+#     else:
+#         return n * factorial(n-1)
+    
+# print(factorial(5))
+
+
