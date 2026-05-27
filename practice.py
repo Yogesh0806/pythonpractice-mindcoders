@@ -513,12 +513,12 @@
 # print(phone_numbers['bos'])
 
 
-dictionary = {
-    'cat': 'chat',
-    'dog': 'chien',
-    'horse': 'cheval'
-}
-words = ['cat', 'loin','horse']
+# dictionary = {
+#     'cat': 'chat',
+#     'dog': 'chien',
+#     'horse': 'cheval'
+# }
+# words = ['cat', 'loin','horse']
 
 
 # for word in words:
