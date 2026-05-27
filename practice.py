@@ -490,3 +490,107 @@
 # print(t1, t2, t3)
 # print(type(t1), type(t2), type(t3))
 
+# dictinary = {
+#     'Cat': 'chat',
+#     'Dog': 'chien',
+#     'Horse': 'cheval'
+# }
+
+# phone_numbers = { 'boss': 5551234567, 'Suzy': 5559876543, 'Jenny': 5556781234 }
+# empty_dictinary = {}
+
+# print(dictinary)
+# print(phone_numbers)
+# print(empty_dictinary)
+# print(type(dictinary))
+# print(type(phone_numbers))
+# print(type(empty_dictinary))
+
+
+# print(dictinary['Cat'])
+# print(phone_numbers['Suzy'])
+
+# print(phone_numbers['bos'])
+
+
+dictionary = {
+    'cat': 'chat',
+    'dog': 'chien',
+    'horse': 'cheval'
+}
+words = ['cat', 'loin','horse']
+
+
+# for word in words:
+#     if word in dictionary:
+#         print(word, '->', dictionary[word])
+#     else:
+#         print(word, 'is not in the dictionary')
+
+
+# print(dictionary.keys())
+
+# for key in dictionary.keys():
+#     print(key, '->', dictionary[key])
+    
+# print(dictionary.items())
+
+# for key, value in dictionary.items():
+#     print(key, '->', value)
+
+# print(dictionary.values())
+
+# for value in dictionary.values():
+#     print(value)
+
+# pol_eng_dict ={ 
+ 
+#                'zemek': 'castle',
+#                'woda'   : 'water',
+#                'gleba'   : 'soil'
+               
+#                }
+# print('pol_eng_dict:', pol_eng_dict)
+# copy_pol_eng_dict = pol_eng_dict.copy()
+
+# print('copy_pol_eng_dict:', copy_pol_eng_dict)
+
+
+
+# pol_eng_dict ={ 
+ 
+#                'zemek': 'castle',
+#                'woda'   : 'water',
+#                'gleba'   : 'soil'
+               
+#                }
+
+# pol_eng_dict['zamek'] = 'lock'
+# item = pol_eng_dict['zamek']
+# print('item:', item)
+
+
+
+# phonebook = {} #Creating an empty dictionary named phonebook
+
+# print(phonebook)
+
+# phonebook['boss'] = 5551234567 #Adding a key-value pair to the phonebook dictionary, where the key is 'boss' and the value is 5551234567
+
+# print(phonebook) #output:{'boss': 5551234567}
+
+# del phonebook['boss']
+# print(phonebook)
+
+
+pol_eng_dict ={ 'kwiat' : 'flower', 'drzewo' : 'tree', 'gleba' : 'soil' }
+
+pol_eng_dict.update({
+    'woda' : 'water',
+    'powietrze' : 'air'
+})
+
+print(pol_eng_dict)
+
+pol_eng_dict.popitem()
+print(pol_eng_dict)
