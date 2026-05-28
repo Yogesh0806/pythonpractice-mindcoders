@@ -583,14 +583,58 @@
 # print(phonebook)
 
 
-pol_eng_dict ={ 'kwiat' : 'flower', 'drzewo' : 'tree', 'gleba' : 'soil' }
+# pol_eng_dict ={ 'kwiat' : 'flower', 'drzewo' : 'tree', 'gleba' : 'soil' }
 
-pol_eng_dict.update({
-    'woda' : 'water',
-    'powietrze' : 'air'
-})
+# pol_eng_dict.update({
+#     'woda' : 'water',
+#     'powietrze' : 'air'
+# })
 
-print(pol_eng_dict)
+# print(pol_eng_dict)
 
-pol_eng_dict.popitem()
-print(pol_eng_dict)
+# pol_eng_dict.popitem()
+# print(pol_eng_dict)
+
+
+
+# pol_eng_dict ={ 'kwiat' : 'flower', 'drzewo' : 'tree', 'gleba' : 'soil' }
+# print(pol_eng_dict)
+# print(len(pol_eng_dict))
+
+# del pol_eng_dict['gleba']
+# print(pol_eng_dict)
+# print(len(pol_eng_dict))
+
+# del pol_eng_dict
+# print(pol_eng_dict)
+
+
+sd = {
+    
+}
+while True:
+    name = input("Enter student name: ")
+    if name == '':
+        break
+    score = int(input(f"Enter {name}'s score: "))
+    
+    if score not in range(1,11):
+        break
+    if name in sd:
+        sd[name] += (score,)
+    else:
+        sd[name] = (score,)
+        
+print(sd)
+
+
+for name, mark in sd.items():
+    # print(name, '->', mark)
+    sum = 0
+    for m in mark:
+        sum += m
+    print(name, '->', sum/len(mark))
+    
+    
+
+                  
