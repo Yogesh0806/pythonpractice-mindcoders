@@ -609,32 +609,96 @@
 # print(pol_eng_dict)
 
 
-sd = {
+# sd = {
     
-}
-while True:
-    name = input("Enter student name: ")
-    if name == '':
-        break
-    score = int(input(f"Enter {name}'s score: "))
+# }
+# while True:
+#     name = input("Enter student name: ")
+#     if name == '':
+#         break
+#     score = int(input(f"Enter {name}'s score: "))
     
-    if score not in range(1,11):
-        break
-    if name in sd:
-        sd[name] += (score,)
-    else:
-        sd[name] = (score,)
+#     if score not in range(1,11):
+#         break
+#     if name in sd:
+#         sd[name] += (score,)
+#     else:
+#         sd[name] = (score,)
         
-print(sd)
+# print(sd)
 
 
-for name, mark in sd.items():
-    # print(name, '->', mark)
-    sum = 0
-    for m in mark:
-        sum += m
-    print(name, '->', sum/len(mark))
+# for name, mark in sd.items():
+#     # print(name, '->', mark)
+#     sum = 0
+#     for m in mark:
+#         sum += m
+#     print(name, '->', sum/len(mark))
+
+
+
+
+
+
+# OOPS
+
+
+
+
+
+# class
+# the class is a blueprint for creating objects. It defines a set of attributes and methods that the objects created from the class will have. 
+# An object is an instance of a class, which means it is a specific realization of the class with its own unique data and behavior.
+# property is a characteristic of an object, such as its name, age, or color. It is defined in the class and can be accessed and modified by the objects created from the class.
+# method is a function that is defined in a class and can be called on an object created from the class. It defines the behavior of the object and can access and modify the object's properties.
+# self is a special keyword in Python that refers to the instance of the class that is currently being accessed. It is used to access the properties and methods of the object within the class definition.
+
+
+# class ThisIsMyFirstClass:
+#     name = 'Soyash'
+#     age = 20
     
-    
+#     def get_name(self):
+#         print(self.name)
+        
 
-                  
+# first_object = ThisIsMyFirstClass()
+# print(first_object)
+
+# first_object.get_name()
+# print(first_object.name)
+
+
+class student:
+    def __init__(self,name, age, gender, grade):
+        self.name = name
+        self.age = age
+        self.gender = gender
+        self.grade = grade
+    
+    def printDetails(self):
+        print('Name:', self.name)
+        print('Age:', self.age)
+        print('Gender:', self.gender)
+        print('Grade:', self.grade)
+        
+        
+yogesh = student("Yogesh Yadav", 20, "male", "A+")
+mayur = student("Mayur", 22, "male", "A")
+
+# print(yogesh)
+# print(mayur)
+
+# yogesh.name = "Yogesh Yadav"
+# yogesh.age = 20
+# yogesh.gender = "male"
+# yogesh.grade = "A+"
+
+# print('Name:', yogesh.name)
+# print('Age:', yogesh.age)
+# print('Gender:', yogesh.gender)
+# print('Grade:', yogesh.grade)
+yogesh.printDetails()
+mayur.printDetails()
+
+
