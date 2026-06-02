@@ -647,11 +647,16 @@
 
 
 # class
-# the class is a blueprint for creating objects. It defines a set of attributes and methods that the objects created from the class will have. 
-# An object is an instance of a class, which means it is a specific realization of the class with its own unique data and behavior.
-# property is a characteristic of an object, such as its name, age, or color. It is defined in the class and can be accessed and modified by the objects created from the class.
-# method is a function that is defined in a class and can be called on an object created from the class. It defines the behavior of the object and can access and modify the object's properties.
-# self is a special keyword in Python that refers to the instance of the class that is currently being accessed. It is used to access the properties and methods of the object within the class definition.
+# the class is a blueprint for creating objects. It defines a set of attributes and methods th
+# at the objects created from the class will have. 
+# An object is an instance of a class, which means it is a specific realization of the class 
+# with its own unique data and behavior.
+# property is a characteristic of an object, such as its name, age, or color. It 
+# is defined in the class and can be accessed and modified by the objects created from the class.
+# method is a function that is defined in a class and can be called on an object created 
+# from the class. It defines the behavior of the object and can access and modify the object's properties.
+# self is a special keyword in Python that refers to the instance of the class that is c
+# urrently being accessed. It is used to access the properties and methods of the object within the class definition.
 
 
 # class ThisIsMyFirstClass:
@@ -669,22 +674,22 @@
 # print(first_object.name)
 
 
-class student:
-    def __init__(self,name, age, gender, grade):
-        self.name = name
-        self.age = age
-        self.gender = gender
-        self.grade = grade
+# class student:
+#     def __init__(self,name, age, gender, grade):
+#         self.name = name
+#         self.age = age
+#         self.gender = gender
+#         self.grade = grade
     
-    def printDetails(self):
-        print('Name:', self.name)
-        print('Age:', self.age)
-        print('Gender:', self.gender)
-        print('Grade:', self.grade)
+#     def printDetails(self):
+#         print('Name:', self.name)
+#         print('Age:', self.age)
+#         print('Gender:', self.gender)
+#         print('Grade:', self.grade)
         
         
-yogesh = student("Yogesh Yadav", 20, "male", "A+")
-mayur = student("Mayur", 22, "male", "A")
+# yogesh = student("Yogesh Yadav", 20, "male", "A+")
+# mayur = student("Mayur", 22, "male", "A")
 
 # print(yogesh)
 # print(mayur)
@@ -698,7 +703,148 @@ mayur = student("Mayur", 22, "male", "A")
 # print('Age:', yogesh.age)
 # print('Gender:', yogesh.gender)
 # print('Grade:', yogesh.grade)
-yogesh.printDetails()
-mayur.printDetails()
+# yogesh.printDetails()
+# mayur.printDetails()
+
+
+# class ExampleClass:
+#     def __init__(self,val=1):
+#         self.first = val
+        
+#     def set_second(self,val):
+#         self.second = val
+        
+# example_object_1 = ExampleClass()
+# example_object_2 = ExampleClass(2)
+# example_object_2.set_second(3)
+# example_object_3 = ExampleClass(4)
+# example_object_3.third = 5
+
+# print(example_object_1)
+
+# print(example_object_1.__dict__)
+# print(example_object_2.__dict__) 
+# print(example_object_3.__dict__)
+
+
+
+# class classy:
+#     def method(self, par):
+#         print('method',par)
+        
+        
+# obj = classy()
+# obj.method(1)
+
+
+
+# class classy:
+#     varia = 2
+#     def method(self):
+#         print(self.varia,self.var)
+        
+# obj = classy()
+# obj.var = 3 
+# obj.method()
+
+
+# class Star:
+#     def __init__(self, name, galaxy):
+#         self.name = name
+#         self.galaxy = galaxy
+        
+# sun = Star('Sun', 'Milky Way')
+# print(sun)
+
+
+# class Star:
+#     def __init__(self, name, galaxy):
+#         self.name = name
+#         self.galaxy = galaxy
+#     def __str__(self):
+#        return self.name + ' in '+ self.galaxy
+# sun = Star('Sun', 'Milky Way')
+# print(sun)
+
+
+# class Vehicle:
+#     pass 
+
+# class LandVehicle(Vehicle):
+#     pass
+
+# class TrackedVehicle(LandVehicle):
+#     pass
+
+
+
+# class Vehicle:
+#     pass 
+
+# class LandVehicle(Vehicle):
+#     pass
+
+# class TrackedVehicle(LandVehicle):
+#     pass
+
+# for cls1 in [Vehicle, LandVehicle, TrackedVehicle]:
+#     for cls2 in [Vehicle, LandVehicle, TrackedVehicle]:
+#         print(issubclass(cls1, cls2), end='\t') #issubclass() is a built-in function in Python that checks if a class is a subclass of another class. It takes two arguments: the first argument is the class to check, and the second argument is the class to compare against. The function returns True if the first class is a subclass of the second class, and False otherwise.
+#     print()
+
+
+# class Super:
+#     supVar = 1
+    
+# class Sub(Super):
+#     subVar = 2
+    
+# obj = Sub()
+# print(obj.subVar)
+# print(obj.supVar)
+
+
+# class Super:
+#     def __init__(self):
+#         self.supVar = 11
+        
+# class Sub(Super):
+#     def __init__(self):
+#         super().__init__() #super() is a built-in function in Python that returns a temporary object of the superclass that allows you to call its methods. It is commonly used in the __init__ method of a subclass to call the __init__ method of the superclass and initialize its attributes.
+#         self.subVar = 12
+        
+        
+# obj = Sub()
+# print(obj.subVar)
+# print(obj.supVar)
+
+
+class Level1:
+    variable_1 = 100
+    def __init__(self):
+        self.var_1 = 101
+    def fun_1(self):
+        return 102
+    
+class Level2(Level1):
+    variable_2 = 200
+    def __init__(self):
+        super().__init__()
+        self.var_2 = 201
+    def fun_2(self):
+        return 202
+    
+class Level3(Level2):
+    variable_3 = 300
+    def __init__(self):
+        super().__init__()
+        self.var_3 = 301
+    def fun_3(self):
+        return 302
+    
+obj = Level3()
+print(obj.variable_1, obj.var_1, obj.fun_1())
+print(obj.variable_2, obj.var_2, obj.fun_2())
+print(obj.variable_3, obj.var_3, obj.fun_3())
 
 
