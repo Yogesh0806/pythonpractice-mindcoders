@@ -42,4 +42,13 @@ print(f"The total amount of items to pay is {order_total}")
 
 
 
-
+# this program can be further enhanced by adding features such as:
+# 1. Allowing customers to specify the quantity of each item they want to order.
+# 2. Implementing a more comprehensive menu with additional items and categories.
+# 3. Adding functionality for customers to remove items from their order before finalizing the bill.
+# 4. Incorporating a payment system that accepts different payment methods (e.g., cash, credit card).
+# 5. Providing an option for customers to view their order summary before confirming the purchase.
+# 6. Implementing a user interface (UI) using libraries such as Tkinter or PyQt for a more interactive experience.
+# 7. Adding a feature to save the order history for future reference or analytics.
+# 8. Implementing a loyalty program that rewards customers for repeat purchases.
+# These enhancements can make the restaurant management system more robust and user-friendly, providing a better experience for both customers and restaurant staff.
