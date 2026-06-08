@@ -916,3 +916,112 @@
 
 # # Output: if we provide even value then it will print 2 and if we provide odd value then it will print 1. In this case, since we provided 3 (which is odd), it will print 1 for example_object.a and will raise an AttributeError for example_object.b because it does not exist in the object.
 
+#Excaption handling:
+
+
+# class ExampleClass:
+#     counter = 0
+#     def __init__(self,val = 1):
+#         ExampleClass.counter += 1
+#         if val%2!= 0:
+#             self.a =1
+#         else:
+#             self.b = 2
+            
+# example_object = ExampleClass(8)
+
+# try:
+#     print('a = ',example_object.a)
+# except AttributeError:
+#     try:
+#         print('b = ',example_object.b)
+#     except AttributeError:
+#         print('The error has occured! Sliently passing it!')
+        
+        
+# class ExampleClass:
+#     counter = 0
+#     def __init__(self,val = 1):
+#         ExampleClass.counter += 1
+#         if val%2!= 0:
+#             self.a =1
+#         else:
+#             self.b = 2
+            
+# example_object = ExampleClass(1)
+
+# if hasattr(example_object, 'a'):
+#     print('a = ',example_object.a)
+    
+# if hasattr(example_object, 'b'):
+#     print('b = ',example_object.b)
+    
+    
+    
+# class ExampleClass:
+#     counter = 0
+#     def __init__(self,val = 1):
+#         ExampleClass.counter += 1
+#         if val%2!= 0:
+#             self.a =1
+#         else:
+#             self.b = 2
+            
+            
+# example_object = ExampleClass(1)
+
+
+# if hasattr(example_object, 'a'):
+#     print('a = ',example_object.a)
+    
+# if hasattr(example_object, 'b'):
+#     print('b = ',example_object.b)
+    
+    
+# print(hasattr(example_object, 'a'))
+# print(hasattr(example_object, 'b'))
+
+
+# class Python :
+#     population =1
+#     victims = 0
+#     def __init__(self):
+#         self.lengh_ft = 3
+#         self.__venomous = False
+        
+# myObj = Python()
+# print('myObj.population:', myObj.population)
+# print('myObj.victims:', myObj.victims)
+# print('myObj.lengh_ft:', myObj.lengh_ft)
+# # print('myObj.__venomous:', myObj.__venomous) #This will raise an AttributeError because __venomous is a private attribute and cannot be accessed directly from outside the class. To access it, we would need to use a method defined within the class that returns its value or use name mangling to access it indirectly.
+# # print('myObj.venomous:', myObj.venomous) #this will raise an AttributeError because the attribute is defined with double underscores, which makes it a private attribute and it cannot be accessed directly from outside the class. To access it, we would need to use a method defined within the class that returns its value or use name mangling to access it indirectly.
+# print('myObj._Python__venomous:', myObj._Python__venomous) #This will print the value of the private attribute __venomous using name mangling, which allows us to access it indirectly by using the class name and the attribute name with double underscores. In this case, it will print False, which is the value assigned to __venomous in the __init__ method of the Python class.
+
+
+
+
+
+#  Name mangling 
+
+
+# Name mangling is a technique used in Python to access private attributes and methods of a class. When an attribute or method is defined with double underscores (e.g., __attribute), it is considered private and cannot be accessed directly from outside the class. However, Python provides a way to access these private members using name mangling, which involves prefixing the attribute or method name with the class name and a single underscore (e.g., _ClassName__attribute). This allows us to access the private members indirectly while still maintaining encapsulation.
+
+class Classy:
+    def visible(self):
+        print('This method is visible')  
+    
+    def __hidden(self):
+        print('This method is hidden')
+        
+obj = Classy()
+obj.visible() #output: visible
+try:
+    obj.__hidden() # This fails
+except:
+    print('Failed to access hidden method') #output: Failed to access hidden method
+    
+obj._Classy__hidden() #output: This method is hidden
+
+obj = Classy()
+print(type(obj))
+print(type(obj).__name__)
