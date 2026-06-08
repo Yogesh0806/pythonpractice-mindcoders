@@ -653,10 +653,16 @@
 # with its own unique data and behavior.
 # property is a characteristic of an object, such as its name, age, or color. It 
 # is defined in the class and can be accessed and modified by the objects created from the class.
+
 # method is a function that is defined in a class and can be called on an object created 
 # from the class. It defines the behavior of the object and can access and modify the object's properties.
-# self is a special keyword in Python that refers to the instance of the class that is c
-# urrently being accessed. It is used to access the properties and methods of the object within the class definition.
+
+# self is a special keyword in Python that refers to the instance of the class that is 
+# currently being accessed. It is used to access the properties and methods of the object within the class definition.
+
+# __dict__ is a special attribute in Python that is used to store the attributes and methods of an object.
+# It is a dictionary that contains the names of the attributes and methods as keys and their corresponding values as values. 
+# The __dict__ attribute can be accessed to view or modify the attributes and methods of an object.
 
 
 # class ThisIsMyFirstClass:
@@ -819,42 +825,42 @@
 # print(obj.supVar)
 
 
-class Level1:
-    variable_1 = 100
-    def __init__(self):
-        self.var_1 = 101
-    def fun_1(self):
-        return 102
+# class Level1:
+#     variable_1 = 100
+#     def __init__(self):
+#         self.var_1 = 101
+#     def fun_1(self):
+#         return 102
     
-class Level2(Level1):
-    variable_2 = 200
-    def __init__(self):
-        super().__init__()
-        self.var_2 = 201
-    def fun_2(self):
-        return 202
+# class Level2(Level1):
+#     variable_2 = 200
+#     def __init__(self):
+#         super().__init__()
+#         self.var_2 = 201
+#     def fun_2(self):
+#         return 202
     
-class Level3(Level2):
-    variable_3 = 300
-    def __init__(self):
-        super().__init__()
-        self.var_3 = 301
-    def fun_3(self):
-        return 302
+# class Level3(Level2):
+#     variable_3 = 300
+#     def __init__(self):
+#         super().__init__()
+#         self.var_3 = 301
+#     def fun_3(self):
+#         return 302
     
-obj = Level3()
-print(obj.variable_1, obj.var_1, obj.fun_1())
-print(obj.variable_2, obj.var_2, obj.fun_2())
-print(obj.variable_3, obj.var_3, obj.fun_3())
+# obj = Level3()
+# print(obj.variable_1, obj.var_1, obj.fun_1())
+# print(obj.variable_2, obj.var_2, obj.fun_2())
+# print(obj.variable_3, obj.var_3, obj.fun_3())
 
 
 #!/bin/python3
 
-import math
-import os
-import random
-import re
-import sys
+# import math
+# import os
+# import random
+# import re
+# import sys
 
 #
 # Complete the 'factorial' function below.
@@ -863,18 +869,33 @@ import sys
 # The function accepts INTEGER n as parameter.
 #
 
-def factorial(n):
-    if n == 0:
-        return 1
-    # Write your code here
-    return n * factorial(n-1)
-if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+# def factorial(n):
+#     if n == 0:
+#         return 1
+#     # Write your code here
+#     return n * factorial(n-1)
+# if __name__ == '__main__':
+#     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
-    n = int(input().strip())
+#     n = int(input().strip())
 
-    result = factorial(n)
+#     result = factorial(n)
 
-    fptr.write(str(result) + '\n')
+#     fptr.write(str(result) + '\n')
 
-    fptr.close()
+#     fptr.close()
+    
+    
+class ExampleClass:
+    counter = 0
+    def __init__(self,val=1):
+        self._first = val  
+        ExampleClass.counter += 1
+        
+example_object_1 = ExampleClass()
+example_object_2 = ExampleClass(2)
+example_object_3 = ExampleClass(4)
+
+print(example_object_1.__dict__,example_object_1.counter)
+print(example_object_2.__dict__,example_object_2.counter)
+print(example_object_3.__dict__,example_object_3.counter)
