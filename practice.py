@@ -886,16 +886,33 @@
 #     fptr.close()
     
     
-class ExampleClass:
-    counter = 0
-    def __init__(self,val=1):
-        self._first = val  
-        ExampleClass.counter += 1
+# class ExampleClass:
+#     counter = 0
+#     def __init__(self,val=1):
+#         self._first = val  
+#         ExampleClass.counter += 1
         
-example_object_1 = ExampleClass()
-example_object_2 = ExampleClass(2)
-example_object_3 = ExampleClass(4)
+# example_object_1 = ExampleClass()
+# example_object_2 = ExampleClass(2)
+# example_object_3 = ExampleClass(4)
 
-print(example_object_1.__dict__,example_object_1.counter)
-print(example_object_2.__dict__,example_object_2.counter)
-print(example_object_3.__dict__,example_object_3.counter)
+# print(example_object_1.__dict__,example_object_1.counter)
+# print(example_object_2.__dict__,example_object_2.counter)
+# print(example_object_3.__dict__,example_object_3.counter)
+
+
+# class ExampleClass:
+#     counter = 0
+#     def __init__(self,val = 1):
+#         ExampleClass.counter += 1
+#         if val%2!= 0:
+#             self.a =1
+#         else:
+#             self.b = 2
+            
+# example_object = ExampleClass(3)
+# print(example_object.a)
+# print(example_object.b)
+
+# # Output: if we provide even value then it will print 2 and if we provide odd value then it will print 1. In this case, since we provided 3 (which is odd), it will print 1 for example_object.a and will raise an AttributeError for example_object.b because it does not exist in the object.
+
