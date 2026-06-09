@@ -1145,21 +1145,48 @@
 #polymorphism
 
 
-class One:
-    def do_it(self):
-        print('Do_it from one')
+# class One:
+#     def do_it(self):
+#         print('Do_it from one')
     
-    def doAnything(self):
-        self.do_it() #This line calls the do_it() method of the class. However, since the do_it() method is overridden in the Two class, when doAnything() is called on an instance of Two, it will use the overridden version of do_it() from the Two class instead of the one from the One class. This is an example of polymorphism, where a method can have different implementations in different classes, and the appropriate implementation is chosen at runtime based on the type of the object calling the method.
+#     def doAnything(self):
+#         self.do_it() #This line calls the do_it() method of the class. However, since the do_it() method is overridden in the Two class, when doAnything() is called on an instance of Two, it will use the overridden version of do_it() from the Two class instead of the one from the One class. This is an example of polymorphism, where a method can have different implementations in different classes, and the appropriate implementation is chosen at runtime based on the type of the object calling the method.
     
-class Two(One):
-    def do_it(self):
-        print('Do_it from two')
+# class Two(One):
+#     def do_it(self):
+#         print('Do_it from two')
     
     
-one = One()
-two = Two()
-one.doAnything() #Output: Doing anything in One way
-two.doAnything() #Output: Doing anything in Two way because of polymorphism, where the method do_it() is overridden in the Two class, and when doAnything() is called on an instance of Two, it uses the overridden version of do_it() from the Two class instead of the one from the One class.
+# one = One()
+# two = Two()
+# one.doAnything() #Output: Doing anything in One way
+# two.doAnything() #Output: Doing anything in Two way because of polymorphism, where the method do_it() is overridden in the Two class, and when doAnything() is called on an instance of Two, it uses the overridden version of do_it() from the Two class instead of the one from the One class.
 
 
+
+# def reciprocal(n):
+#     try:
+#         n = 1/n
+#     except ZeroDivisionError:
+#         print('Division failed')
+#         return 'Alibabaa ka chamatkar'
+#     else:
+#         print('Everything went well!')
+#       # return n
+#     finally:
+#         print('Its time to say goodbye!')
+#         return n
+    
+# print('---------')
+# print('reciprocal(2):', reciprocal(2))   # uses else block
+# print('---------')
+# print('reciprocal(0):', reciprocal(0))
+# print('---------')
+
+try:
+    i = int('Hello')
+except Exception as e:
+    print('An error occurred:', e)
+    print(e.__str__())
+    
+    
