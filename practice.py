@@ -1202,19 +1202,84 @@
 
 # CONTINUE STRING MANIPULATION
 
-city = 'New York'
+# city = 'New York'
 
-print(city[0]) #Output: N
-print(city[1]) #Output: e
-print(city[2]) #Output: w
-print(city[-1]) #Output: k
-print(city[3]) #Output:  ' '
-print(city[4]) #Output: Y
-print(city[-2]) #Output: r
-print(city[5]) #Output: o
-print(city[6]) #Output: r
-print(city[7]) #Output: k
+# print(city[0]) #Output: N
+# print(city[1]) #Output: e
+# print(city[2]) #Output: w
+# print(city[-1]) #Output: k
+# print(city[3]) #Output:  ' '
+# print(city[4]) #Output: Y
+# print(city[-2]) #Output: r
+# print(city[5]) #Output: o
+# print(city[6]) #Output: r
+# print(city[7]) #Output: k
 
-print(city[::2]) #Output: NwYrk  #This slice notation means to take every second character from the string, starting from the first character (index 0). So it takes 'N' (index 0), skips 'e' (index 1), takes 'w' (index 2), skips ' ' (index 3), takes 'Y' (index 4), skips 'o' (index 5), takes 'r' (index 6), and skips 'k' (index 7). The resulting string is 'NwYrk'.
+# print(city[::2]) #Output: NwYrk  #This slice notation means to take every second character from the string, starting from the first character (index 0). So it takes 'N' (index 0), skips 'e' (index 1), takes 'w' (index 2), skips ' ' (index 3), takes 'Y' (index 4), skips 'o' (index 5), takes 'r' (index 6), and skips 'k' (index 7). The resulting string is 'NwYrk'.
 
+
+# text = 'Hello Python World'
+
+# #Case
+
+# print(text.upper()) #Output: HELLO PYTHON WORLD
+# print(text.lower()) #Output: hello python world
+# print(text.title()) #Output: Hello Python World
+# print(text.capitalize()) #Output: Hello python world
+
+# #Strip whitespace
+# print(text.strip()) #Output: Hello Python World
+
+
+# #search 
+# print('Python' in text) #Output: True
+# print(text.find('Python')) #Output: 6
+# print(text.count('l'))
+
+# #split and join 
+
+# csv = 'Rahul,22,Bhopal,Engineer'
+# parts  = csv.split(',') 
+
+# print(parts)
+# print(parts[0])
+
+# rejoined = ' | '.join(parts)
+# print(rejoined)
+
+# #Chack content
+
+# print('hello123'.isalnum())
+# print('12345'.isdigit())
+# print('Python'.isalpha())
+# print(' '.isspace())
+
+# #start/end check
+
+# email = 'student@gmail.com'
+# print(email.endswith('.com'))
+# print(email.startswith('stu'))
+
+# name, marks, rank = 'Anita', 92.567, 3
+
+# #basic
+
+# print(f'Hello, {name}')
+
+# #format numbers 
+# print(f'Marks:{marks:.2f}')
+# print(f'marks: {marks:.0f}')
+# print(f'Count:{10000000:,}')
+
+# #padding and alignment
+# print(f'{name:<15}|{marks:>8.2f}|Rank:{rank}')
+# print(f'hello {name:^10}')
+# print(f'hello {name:>10}')
+# print(f'hello {name:<10}')
+# print(f'hello {name:*^10}')
+
+# #Expression inside{}
+
+# price, gst = 500, 0.18
+# print(f'Price:Rs{price} | GST:Rs{price*gst:.2f} | Total:Rs.{price*(1+gst):.2f}')
 
