@@ -1183,10 +1183,38 @@
 # print('reciprocal(0):', reciprocal(0))
 # print('---------')
 
-try:
-    i = int('Hello')
-except Exception as e:
-    print('An error occurred:', e)
-    print(e.__str__())
+# try:
+#     i = int('Hello')
+# except Exception as e:
+#     print('An error occurred:', e)
+#     print(e.__str__())
     
+# class MyzeroDivisionError(ZeroDivisionError):
+#     pass
+
+# def do_the_division(mine):
+#     if mine:
+#         raise MyzeroDivisionError('Some worse news')
+#     else:
+#         raise MyzeroDivisionError('Some bad news')
     
+# do_the_division(False)
+
+# CONTINUE STRING MANIPULATION
+
+city = 'New York'
+
+print(city[0]) #Output: N
+print(city[1]) #Output: e
+print(city[2]) #Output: w
+print(city[-1]) #Output: k
+print(city[3]) #Output:  ' '
+print(city[4]) #Output: Y
+print(city[-2]) #Output: r
+print(city[5]) #Output: o
+print(city[6]) #Output: r
+print(city[7]) #Output: k
+
+print(city[::2]) #Output: NwYrk  #This slice notation means to take every second character from the string, starting from the first character (index 0). So it takes 'N' (index 0), skips 'e' (index 1), takes 'w' (index 2), skips ' ' (index 3), takes 'Y' (index 4), skips 'o' (index 5), takes 'r' (index 6), and skips 'k' (index 7). The resulting string is 'NwYrk'.
+
+
