@@ -1283,3 +1283,47 @@
 # price, gst = 500, 0.18
 # print(f'Price:Rs{price} | GST:Rs{price*gst:.2f} | Total:Rs.{price*(1+gst):.2f}')
 
+
+#WITH OPEN FUNCTION
+
+# with open('data.txt', 'r') as file:
+#     data = file.read()
+    
+# print(data) 
+
+# with open('student.txt','w') as f:
+#     f.write('Rahul Sharma,85, Bhopal\n')
+#     f.write('Priya Verma,92,Indore\n')
+#     f.write('Amit Kumar, 73,Jabalpur\n')
+    
+# with open('student.txt', 'a') as f:
+#     f.write('Sneha Joshi,88,Bhopal\n')
+    
+# with open('student.txt','r') as f:
+#     content = f.read()
+    
+# print(content)
+
+# with open('student.txt', 'r') as f:
+#     for line in f:
+#         name, marks, city = line.strip().split(',')
+#         print(f'{name:<15} | {marks:>5} | {city}')
+#         print('-----------------')
+
+#Creating csv with python
+
+
+import csv
+
+records = [
+    ['Name','Marks','City','Grade'],
+    ['Rahul',85,'Bhopal','B'],
+    ['Priya',92,'Indore','C'],
+    ['Amit',73,'Jabalpur','B'],
+]
+
+with open('student.csv','w',newline='') as f:
+    csv.writer(f).writerows(records)
+    
+#Reading a csv with python
+
