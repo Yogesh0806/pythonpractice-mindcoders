@@ -1315,15 +1315,52 @@
 
 import csv
 
-records = [
-    ['Name','Marks','City','Grade'],
-    ['Rahul',85,'Bhopal','B'],
-    ['Priya',92,'Indore','C'],
-    ['Amit',73,'Jabalpur','B'],
-]
+# records = [
+#     ['Name','Marks','City','Grade'],
+#     ['Rahul',85,'Bhopal','B'],
+#     ['Priya',92,'Indore','C'],
+#     ['Amit',73,'Jabalpur','B'],
+# ]
 
-with open('student.csv','w',newline='') as f:
-    csv.writer(f).writerows(records)
+# with open('student.csv','w',newline='') as f:
+#     csv.writer(f).writerows(records)
     
 #Reading a csv with python
+
+# with open('student.csv','r') as f:
+#     for row in csv.DictReader(f):
+#         print(f'{row['Name']}: {row['Marks']} marks ({row['City']})')
+        
+
+
+records = [
+    ['Name','Age','Subject1','Subject2','Subject3'],
+    ['Rahul',20,98,25,86],
+    ['Yogesh',21,89,97,96],
+    ['Priyansh',20,49,76,85],
+]
+
+with open('new.csv','w', newline='') as f:
+    csv.writer(f).writerows(records)
+    
+# with open('new.csv','r') as f:
+#     for row in csv.DictReader(f):
+#         if row['Name'] == 'Yogesh':
+#             print(row['Yogesh'])
+
+
+# flag =0
+# with open('new.csv','r') as f:
+#     name = input('Enter name : ')
+#     for row in csv.DictReader(f):
+#         if row['Name'] == name :
+#             flag +=1
+#             break
+    
+# if flag == 1:
+#     print(f'{row['Name']}: Subject1 {row['Subject1']} Subject2 {row['Subject2']} Subject3 {row['Subject3']}')
+    
+# else:
+#     print('Student data not found')
+
 
