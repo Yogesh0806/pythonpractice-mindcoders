@@ -1364,12 +1364,53 @@ with open('new.csv','w', newline='') as f:
 #     print('Student data not found')
 
 
-import numpy as np 
+import numpy as np
 
-arr1d = np.array([1,2,3,4,5])
-arr2d = np.array([[89,86,34],[86,33,83],[33,35,27]])
+# arr1d = np.array([1,2,3,4,5])
+# print(arr1d)
+# arr2d = np.array([[89,86,34],[86,33,83],[33,35,27]])
 
-print(arr2d.shape)
-print(arr2d.dtype)
-print(arr2d.ndim)
+# print(arr2d.shape)
+# print(arr2d.dtype)
+# print(arr2d.ndim)
 
+# zeros = np.zeros((3,4))
+# print(zeros)
+
+# ones = np.ones((2,5))
+# print(ones)
+
+# rng = np.arange(0,51.5)
+# print(rng)
+
+# lin = np.linspace(0,1,11)
+# print(lin)
+
+# random = np.random.randint(40,100,(5,3))
+# print(random)
+
+# arr = np.array([10,20,30,40,50])
+
+# print(arr*2)
+# # [ 20  40  60  80 100]
+# print(arr+5)
+# # [15 25 35 45 55]
+# print(arr**2)
+# # [ 100  400  900 1600 2500]
+
+
+# marks_2d = np.array([[85,90,78],[86,47,89],[37,95,99]])
+
+# print('Mean : ',np.mean(marks_2d))
+# print('Mean of row : ',np.mean(marks_2d, axis= 1))
+# print('Mean of column : ',np.mean(marks_2d,axis=0))
+# print('highest value of arr :',np.max(marks_2d))
+# print('Standard Deviation: ',np.std(marks_2d))
+
+#Boolean indexing
+
+# arr = np.array([55,36,83,73,86,46,97,44,79])
+# print(arr[arr > 70])
+
+
+import pandas as pd 
