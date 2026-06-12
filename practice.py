@@ -1364,3 +1364,12 @@ with open('new.csv','w', newline='') as f:
 #     print('Student data not found')
 
 
+import numpy as np 
+
+arr1d = np.array([1,2,3,4,5])
+arr2d = np.array([[89,86,34],[86,33,83],[33,35,27]])
+
+print(arr2d.shape)
+print(arr2d.dtype)
+print(arr2d.ndim)
+
