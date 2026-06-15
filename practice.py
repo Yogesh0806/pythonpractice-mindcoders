@@ -1415,18 +1415,77 @@ import numpy as np
 
 import pandas as pd 
 
-data = {
-    'Name' : ['Rahul', 'Priya', 'Amit', 'Sneha', 'Vikram'],
-    'Age' : [22,21,23,20,24],
-    'Marks' : [85,92,78,88,73],
-    'City' : ['Bhopal','Indore','Bhopal','Jabalpur', 'Indore'],
-}
+# data = {
+#     'Name' : ['Rahul', 'Priya', 'Amit', 'Sneha', 'Vikram'],
+#     'Age' : [22,21,23,20,24],
+#     'Marks' : [85,92,78,88,73],
+#     'City' : ['Bhopal','Indore','Bhopal','Jabalpur', 'Indore'],
+# }
 
-df = pd.DataFrame(data)
-print(df)
+# df = pd.DataFrame(data)
+# print(df)
 
-print(df.shape)
-print(df.head(3))
-print(df.dtypes)
-print(df.describe())
+# print(df.shape)
+# print(df.head(3))
+# print(df.dtypes)
+# print(df.describe())
 
+
+
+# print("df['Name']: \n", df['Name'])
+# print(df[['Name', 'Marks']])
+
+# # Filter rows
+# print(df[df['Marks']>=85])
+# print(df[df['City'] == 'Bhopal'])
+
+
+# print( df[ (df['Marks']>=80) & (df['City'] == 'Indore') ] )
+
+
+# def get_grade(x):
+#     if x >= 90 :
+#         return 'A'
+#     elif x >= 75:
+#         return 'B'
+#     else :
+#         return 'C'
+    
+    
+# df['Grade']  = df['Marks'].apply(get_grade)
+# print(df['Grade'])
+# print('-------------------')
+# print(df)
+
+#GroupBy - like Excel pivot
+# city_avg = df.groupby('City')['Marks'].mean()
+# print(city_avg)
+
+
+#Read real CSV file and perform data cleaning 
+df2 = pd.read_csv('student.csv')
+
+# print(df2)
+# df2.to_csv('clean_output.csv', index=False )
+
+df2['Name'] = df2['Name'].str.strip()
+# print(df2['Name'])
+
+
+df2['Marks'] = df2['Marks'].str.replace('#','')
+# print(df2['Marks'])
+
+# print(df2)
+
+df2['City'] = df2['City'].str.replace('Dist','').str.replace('City','')
+
+# print(df2['City'])
+
+df2['Grade'] = df2['Grade'].str.replace(r'@','')
+
+# print(df2['Grade'])
+
+
+print(df2)
+
+df2.to_csv('clean_output.csv', index=False )
