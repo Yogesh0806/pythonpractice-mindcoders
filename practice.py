@@ -1491,18 +1491,77 @@ import pandas as pd
 
 import matplotlib.pyplot as plt
 
-# Data 
-months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-sales = [45, 52, 48, 61, 58, 72, 69, 75, 68, 82, 90,  95] # in thousands 
+# # Data 
+# months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+# sales = [45, 52, 48, 61, 58, 72, 69, 75, 68, 82, 90,  95] # in thousands 
 
-#LINE CHART - trend over a time 
+# #LINE CHART - trend over a time 
 
-plt.figure(figsize=(12,5))
-plt.plot(months, sales, marker = 'o', color= 'steelblue', linewidth = 2, markersize=8)
-plt.fill_between(months, sales, alpha = 0.15, color= 'steelblue')
-plt.title('Monthly Sales 2024 (Rs. Thousands)', fontsize = 14, fontweight='bold')
-plt.xlabel('Month')
-plt.ylabel('Sales (Rs. K)')
-plt.grid(True, alpha = 0.3)
-plt.tight_layout()
+# plt.figure(figsize=(12,5))
+# plt.plot(months, sales, marker = 'o', color= 'steelblue', linewidth = 2, markersize=8)
+# plt.fill_between(months, sales, alpha = 0.15, color= 'steelblue')
+# plt.title('Monthly Sales 2024 (Rs. Thousands)', fontsize = 14, fontweight='bold')
+# plt.xlabel('Month')
+# plt.ylabel('Sales (Rs. K)')
+# plt.grid(True, alpha = 0.3)
+# plt.tight_layout()
+# plt.show()
+
+
+# cities = ['Bhopal', 'Indore', 'Jabalpur', 'Gwalior', 'Ujjain']
+# students =  [1200, 2800, 980, 850, 650]
+# colors = [
+#     "#0000FF",  # Blue
+#     "#008000",  # Green
+#     "#FFA500",  # Orange
+#     "#FFC0CB",  # Pink
+#     "#FF0000"   # Red
+# ]
+
+# #Baar chart 
+
+# plt.figure(figsize=(9,5))
+# bars = plt.bar(cities, students, color= colors, edgecolor = 'white', linewidth = 1.5)
+# plt.title('Students Enrolled per City')
+# plt.ylabel('Number of students')
+# for  bar,val in zip(bars, students):
+#     plt.text(bar.get_x()+bar.get_width()/2, val+30, str(val), ha = 'center', fontweight='bold')
+# plt.tight_layout()
+# plt.show()         
+
+
+# #SCATTER PLOT - Relation between x and y 
+
+# study_hrs = np.random.uniform(2,10,50)
+# marks = study_hrs*7 + np.random.normal(0,8,50)
+# marks = np.clip(marks, 30, 100)
+
+# plt.figure(figsize=(8,5))
+# plt.scatter(study_hrs, marks, c = marks, cmap = 'RdYlGn', s =100, alpha=0.8)
+# plt.title('Study Hours vs Exam Marks')
+# plt.colorbar(label = 'Marks')
+# plt.xlabel('Study Hours/ Day')
+# plt.ylabel('Exam Marks')
+# plt.show()
+
+
+import seaborn as sns
+
+np.random.seed(42)
+
+df = pd.DataFrame({
+    'marks' : np.random.randint(40,100,100),
+    'study_hrs' : np.random.uniform(2,10,100),
+    'city' : np.random.choice(['Bhopal', 'Indore', 'Jabalpur']),
+    'gender' : np.random.choice(['Male', 'Female'], 100),
+    
+})
+
+#Histogram with KDE - See the distribution 
+
+plt.figure(figsize=(10,4))
+sns.histplot(df['marks'], bins =20, kde =True, color = 'steelblue')
+plt.title('Distribution of Student Marks')
 plt.show()
+
+
