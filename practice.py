@@ -1463,29 +1463,46 @@ import pandas as pd
 
 
 #Read real CSV file and perform data cleaning 
-df2 = pd.read_csv('student.csv')
+# df2 = pd.read_csv('student.csv')
 
-# print(df2)
+# # print(df2)
 # df2.to_csv('clean_output.csv', index=False )
 
-df2['Name'] = df2['Name'].str.strip()
+# df2['Name'] = df2['Name'].str.strip()
 # print(df2['Name'])
 
 
-df2['Marks'] = df2['Marks'].str.replace('#','')
+# df2['Marks'] = df2['Marks'].str.replace('#','')
 # print(df2['Marks'])
 
 # print(df2)
 
-df2['City'] = df2['City'].str.replace('Dist','').str.replace('City','')
-
+# df2['City'] = df2['City'].str.replace('Dist','').str.replace('City','')
 # print(df2['City'])
 
-df2['Grade'] = df2['Grade'].str.replace(r'@','')
+# df2['Grade'] = df2['Grade'].str.replace(r'@','')
 
 # print(df2['Grade'])
 
 
-print(df2)
+# print(df2)
 
-df2.to_csv('clean_output.csv', index=False )
+# df2.to_csv('clean_output.csv', index=False )
+
+import matplotlib.pyplot as plt
+
+# Data 
+months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+sales = [45, 52, 48, 61, 58, 72, 69, 75, 68, 82, 90,  95] # in thousands 
+
+#LINE CHART - trend over a time 
+
+plt.figure(figsize=(12,5))
+plt.plot(months, sales, marker = 'o', color= 'steelblue', linewidth = 2, markersize=8)
+plt.fill_between(months, sales, alpha = 0.15, color= 'steelblue')
+plt.title('Monthly Sales 2024 (Rs. Thousands)', fontsize = 14, fontweight='bold')
+plt.xlabel('Month')
+plt.ylabel('Sales (Rs. K)')
+plt.grid(True, alpha = 0.3)
+plt.tight_layout()
+plt.show()
