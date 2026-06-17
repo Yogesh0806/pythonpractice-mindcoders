@@ -1569,3 +1569,15 @@ df = pd.DataFrame({
 # plt.title('marks distribution by city')
 # plt.show()
 
+# # correlation heatmap - critical in data science 
+
+# plt.figure(figsize=(5,4))
+# sns.heatmap(df[['marks', 'study_hrs']].corr(), annot=True,cmap='coolwarm', vmin=-1,vmax=1)
+# plt.title('Correlation Matrix')
+# plt.show()
+
+# # pair plot - all relationship at once 
+
+# sns.pairplot(df[['marks', 'study_hrs']], diag_kind='kde')
+# plt.show()
+
