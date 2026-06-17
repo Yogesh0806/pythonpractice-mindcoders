@@ -1547,21 +1547,25 @@ import matplotlib.pyplot as plt
 
 import seaborn as sns
 
-np.random.seed(42)
+# np.random.seed(42)
 
 df = pd.DataFrame({
     'marks' : np.random.randint(40,100,100),
     'study_hrs' : np.random.uniform(2,10,100),
-    'city' : np.random.choice(['Bhopal', 'Indore', 'Jabalpur']),
+    'city' : np.random.choice(['Bhopal', 'Indore', 'Jabalpur'],100),
     'gender' : np.random.choice(['Male', 'Female'], 100),
     
 })
 
-#Histogram with KDE - See the distribution 
+# #Histogram with KDE - See the distribution 
 
-plt.figure(figsize=(10,4))
-sns.histplot(df['marks'], bins =20, kde =True, color = 'steelblue')
-plt.title('Distribution of Student Marks')
-plt.show()
+# plt.figure(figsize=(10,4))
+# sns.histplot(df['marks'], bins =20, kde =True, color = 'steelblue')
+# plt.title('Distribution of Student Marks')
+# plt.show()
 
+# # Box plot - outliers and spread per group
+# sns.boxplot(data = df, x ='city', y = 'marks', palette= 'Set1')
+# plt.title('marks distribution by city')
+# plt.show()
 
