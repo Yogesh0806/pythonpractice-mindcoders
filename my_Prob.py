@@ -18,3 +18,5 @@ print(f'P(height > 175cm) = {prob:.4f} = {prob*100: .1f}%')
 print(f'68% of people: {mean_h-std_h : .0f}cm to {mean_h+std_h: .0f}cm')
 print(f'95% of people: {mean_h-2*std_h : .0f}cm to {mean_h+2*std_h: .0f}cm')
 print(f'99.7% of people: {mean_h-3*std_h : .0f}cm to {mean_h+3*std_h: .0f}cm')
+
+

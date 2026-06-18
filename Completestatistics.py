@@ -56,3 +56,4 @@ saleries = [22,28,35,55,48,60,72,85,30,45,52,65,28,34,41,58,75,90]
 # r, p_value = stats.pearsonr(study, marks)
 # print(f'Study-marks correlation : r={r:.3f},p={p_value:.4f}')
 # print('Interpretation:', 'Strong positive' if r>0.7 else 'Moderate' if r>0.4 else 'Weak')
+

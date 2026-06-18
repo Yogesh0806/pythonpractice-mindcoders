@@ -1581,3 +1581,4 @@ df = pd.DataFrame({
 # sns.pairplot(df[['marks', 'study_hrs']], diag_kind='kde')
 # plt.show()
 
+

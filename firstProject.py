@@ -52,3 +52,5 @@ print(f"The total amount of items to pay is {order_total}")
 # 7. Adding a feature to save the order history for future reference or analytics.
 # 8. Implementing a loyalty program that rewards customers for repeat purchases.
 # These enhancements can make the restaurant management system more robust and user-friendly, providing a better experience for both customers and restaurant staff.
+
+
